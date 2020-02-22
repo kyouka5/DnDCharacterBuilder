@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">D&amp;D 5e Character Builder</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="level_text">Level: %s</string>
+    <string name="proficiency_text">Proficiency: +%s</string>
+    <string name="character_info">Level %d %s</string>
+    <string name="header_text">Characters</string>
+    <string-array name="classes">
+        <item>Barbarian</item>
+        <item>Bard</item>
+        <item>Cleric</item>
+        <item>Druid</item>
+        <item>Fighter</item>
+        <item>Monk</item>
+        <item>Paladin</item>
+        <item>Ranger</item>
+        <item>Rogue</item>
+        <item>Sorcerer</item>
+        <item>Warlock</item>
+        <item>Wizard</item>
+    </string-array>
+</resources>

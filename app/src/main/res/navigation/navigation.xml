@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/characterManagerFragment">
+
+    <fragment
+        android:id="@+id/characterBuilderFragment"
+        android:name="com.example.project.characterbuilder.CharacterBuilderFragment"
+        android:label="CharacterBuilderFragment"
+        tools:layout="@layout/fragment_character_builder">
+        <action
+            android:id="@+id/action_characterBuilderFragment_to_characterManagerFragment"
+            app:destination="@id/characterManagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterManagerFragment"
+        android:name="com.example.project.charactermanager.CharacterManagerFragment"
+        android:label="CharacterManagerFragment"
+        tools:layout="@layout/fragment_character_manager">
+        <action
+            android:id="@+id/action_characterManagerFragment_to_characterViewerFragment"
+            app:destination="@+id/characterViewerFragment" />
+        <action
+            android:id="@+id/action_characterManagerFragment_to_characterBuilderFragment"
+            app:destination="@id/characterBuilderFragment" />
+        <action
+            android:id="@+id/action_characterManagerFragment_to_overviewFragment"
+            app:destination="@id/overviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterViewerFragment"
+        android:name="com.example.project.characterviewer.CharacterViewerFragment"
+        android:label="CharacterViewerFragment" >
+        <argument
+            android:name="characterId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_characterViewerFragment_to_characterManagerFragment"
+            app:destination="@id/characterManagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/overviewFragment"
+        android:name="com.example.project.posts.PostsFragment"
+        android:label="OverviewFragment" >
+        <action
+            android:id="@+id/action_overviewFragment_to_characterManagerFragment"
+            app:destination="@id/characterManagerFragment" />
+    </fragment>
+</navigation>
